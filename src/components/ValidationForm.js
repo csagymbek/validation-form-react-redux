@@ -1,16 +1,16 @@
-import { useSelector } from "react-redux";
 import "./ValidationForm.css";
+import { useSelector } from "react-redux";
+import { useState } from "react";
 
 export const ValidationForm = () => {
-  const firstName = useSelector((state) => state.firstName);
-  const lastName = useSelector((state) => state.lastName);
-  const email = useSelector((state) => state.email);
-  const organization = useSelector((state) => state.organization);
   const residence = useSelector((state) => state.residence);
-  console.log(residence);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [organization, setOrganization] = useState("");
 
   return (
-    <div className="validationForm">
+    <form className="validationForm">
       <div className="validationForm__inputFields">
         <input type="text" value={firstName} required placeholder="Name" />
         <input type="text" value={lastName} required placeholder="Last Name" />
@@ -25,7 +25,11 @@ export const ValidationForm = () => {
       <div className="validationForm__selectField">
         <label htmlFor="">- SELECT ONE -</label>
         <select name="" id="" value="">
-          <option value=""></option>
+          {residence.map((st) => (
+            <option value={st} key={st}>
+              {st}
+            </option>
+          ))}
         </select>
       </div>
       <div className="validationForm__checkboxField">
@@ -40,6 +44,6 @@ export const ValidationForm = () => {
         <button type="submit">SUBMIT</button>
         <button>RESET</button>
       </div>
-    </div>
+    </form>
   );
 };
