@@ -1,9 +1,18 @@
 export const USER_SUBMIT = "USER_SUBMIT";
 
 const initialState = {
-  residence: ["CA", "WA", "TX", "NY", "AL"],
+  state: null,
   isSubmitted: false,
-  user: null,
+  user: {
+    firstName: "",
+    lastName: "",
+    email: "",
+    state: "",
+    organization: "",
+    advances: false,
+    alerts: false,
+    other: false,
+  },
 };
 
 export const submitUser = (userObj) => ({

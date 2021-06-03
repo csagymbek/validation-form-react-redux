@@ -11,6 +11,7 @@ export const App = () => {
   return (
     <div className="app">
       {isSubmitted ? (
+        // The React Router also could be used here to push the user to different page
         <SubmitWindow />
       ) : (
         <>
