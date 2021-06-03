@@ -3,3 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-image: url("./assets/texture.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+}
