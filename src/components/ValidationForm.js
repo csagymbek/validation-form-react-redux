@@ -11,16 +11,22 @@ export const ValidationForm = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [organization, setOrganization] = useState("");
-  const [states, setStates] = useState(["CA", "WA", "TX", "NY", "AL"]);
   const dispatch = useDispatch();
-  console.log(states);
 
   return (
     <form
       className="validationForm"
       onSubmit={(e) => {
         e.preventDefault();
-        dispatch(submitUser({ firstName, lastName, email, organization }));
+        dispatch(
+          submitUser({
+            firstName,
+            lastName,
+            email,
+            organization,
+            isSubmitted: true,
+          })
+        );
       }}
     >
       <div className="validationForm__inputFields">
@@ -55,15 +61,8 @@ export const ValidationForm = () => {
       </div>
       <div className="validationForm__selectField">
         <label htmlFor="">- STATE RESIDENCE -</label>
-        <select
-          name=""
-          id=""
-          value={states}
-          onChange={(e) =>
-            setStates((prevStates) => prevStates.slice(e.target.value, 0))
-          }
-        >
-          {states?.map((st) => (
+        <select name="" id="">
+          {residence?.map((st) => (
             <option value={st} key={st}>
               {st}
             </option>

@@ -1,7 +1,7 @@
 export const USER_SUBMIT = "USER_SUBMIT";
 
 const initialState = {
-  residence: null,
+  residence: ["CA", "WA", "TX", "NY", "AL"],
   isSubmitted: false,
   user: null,
 };
