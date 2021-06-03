@@ -1,2 +1,56 @@
 .validationForm {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.validationForm__inputFields {
+  display: flex;
+  margin: 1rem;
+}
+.validationForm__inputFields input {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.validationForm__selectField {
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.validationForm__selectField label {
+  margin-right: 0.5rem;
+}
+
+.validationForm__checkboxField {
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.validationForm__checkboxField input {
+  margin: 1rem;
+  padding: 1rem;
+}
+.validationForm__checkboxField label {
+  margin-left: -10rem;
+}
+
+.validationForm__submitSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.validationForm__submitSection button {
+  margin: 1rem;
+  padding: 0.5rem;
+  background: #333;
+  color: white;
+  border-radius: 0.5rem;
 }

@@ -5,8 +5,8 @@
 }
 
 body {
-  background-image: url("./assets/texture.png");
+  /* background-image: url("./assets/texture.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   font-family: "Montserrat", sans-serif;
 }

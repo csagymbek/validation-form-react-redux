@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import "./ValidationForm.css";
 
 export const ValidationForm = () => {
   const firstName = useSelector((state) => state.firstName);
@@ -11,10 +12,15 @@ export const ValidationForm = () => {
   return (
     <div className="validationForm">
       <div className="validationForm__inputFields">
-        <input type="text" value={firstName} />
-        <input type="text" value={lastName} />
-        <input type="text" value={email} />
-        <input type="text" value={organization} />
+        <input type="text" value={firstName} required placeholder="Name" />
+        <input type="text" value={lastName} required placeholder="Last Name" />
+        <input type="text" value={email} required placeholder="Email" />
+        <input
+          type="text"
+          value={organization}
+          required
+          placeholder="Organization"
+        />
       </div>
       <div className="validationForm__selectField">
         <label htmlFor="">- SELECT ONE -</label>
@@ -24,11 +30,15 @@ export const ValidationForm = () => {
       </div>
       <div className="validationForm__checkboxField">
         <input type="checkbox" />
-        ADVANCES
+        <label htmlFor="">ADVANCES</label>
         <input type="checkbox" />
-        OTHER COMMUNICATIONS
+        <label htmlFor="">OTHER COMMUNICATIONS</label>
         <input type="checkbox" />
-        ALERTS
+        <label htmlFor="">ALERTS</label>
+      </div>
+      <div className="validationForm__submitSection">
+        <button type="submit">SUBMIT</button>
+        <button>RESET</button>
       </div>
     </div>
   );
