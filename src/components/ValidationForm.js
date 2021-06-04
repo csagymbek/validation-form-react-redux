@@ -135,8 +135,12 @@ export const ValidationForm = () => {
           </div>
         </div>
         <div className="validationForm__submitSection">
-          <button type="submit">SUBMIT</button>
-          <button onClick={onReset}>RESET</button>
+          <button type="submit" className="validationForm__submitButton">
+            SUBMIT
+          </button>
+          <button onClick={onReset} className="validationForm__resetButton">
+            RESET
+          </button>
         </div>
       </form>
     </>
