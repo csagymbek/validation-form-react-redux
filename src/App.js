@@ -1,9 +1,9 @@
 import React from "react";
-import "./App.css";
+import "./styles/App.sass";
 import { ValidationForm } from "./components/ValidationForm";
 import { useSelector } from "react-redux";
-// import { BrowserRouter as Router } from "react-router-dom";
 import { SubmitWindow } from "./components/SubmitWindow";
+// import { BrowserRouter as Router } from "react-router-dom";
 
 export const App = () => {
   const isSubmitted = useSelector((state) => state.isSubmitted);
@@ -15,7 +15,6 @@ export const App = () => {
         <SubmitWindow />
       ) : (
         <>
-          <h1>Sign up for email updates</h1>
           <ValidationForm />
         </>
       )}
